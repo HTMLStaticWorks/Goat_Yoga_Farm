@@ -114,4 +114,23 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('rtl', newDir === 'rtl' ? 'true' : 'false');
         });
     });
+
+    // Back to Top functionality
+    const backToTopBtn = document.querySelector('.back-to-top');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });

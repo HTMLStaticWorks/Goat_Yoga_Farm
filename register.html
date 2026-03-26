@@ -1,58 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register | GoatFarm</title>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 </head>
+
 <body class="auth-page">
 
-    <div class="auth-card animate-up">
-        <a href="index.html" class="auth-logo">GoatFarm</a>
-        
-        <h2 style="margin-bottom: 30px;">Join the Herd! 🐐</h2>
-        
+    <div class="auth-card animate-up" style="position: relative;">
+        <div style="position: absolute; top: 20px; right: 20px; display: flex; gap: 10px;">
+            <button class="rtl-toggle theme-toggle" title="Toggle RTL"
+                style="background: var(--bg-secondary); border: 1px solid rgba(0,0,0,0.1); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">🌐</button>
+            <button class="theme-toggle"
+                style="background: var(--bg-secondary); border: 1px solid rgba(0,0,0,0.1); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">🌙</button>
+        </div>
+        <a href="index.html" class="auth-logo"
+            style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px; width: 100%;">
+            <img src="assets/images/logo.svg" alt="GoatFarm" style="height: 40px;">
+        </a>
+
+        <h3 style="margin-bottom: 30px;">Join the Herd! 🐐</h3>
+
         <form action="dashboard.html" method="GET" style="display: flex; flex-direction: column; align-items: center;">
             <div class="form-group" style="width: 100%;">
                 <label class="form-label">Full Name</label>
                 <input type="text" class="form-input" placeholder="Enter your full name" required>
             </div>
-            
+
             <div class="form-group" style="width: 100%;">
                 <label class="form-label">Email</label>
                 <input type="email" class="form-input" placeholder="Enter your email" required>
             </div>
-            
+
             <div class="form-group" style="width: 100%;">
                 <label class="form-label">Password</label>
                 <input type="password" class="form-input" placeholder="Create a password" required>
             </div>
-            
+
             <div class="form-group" style="width: 100%;">
                 <label class="form-label">Confirm Password</label>
                 <input type="password" class="form-input" placeholder="Confirm your password" required>
             </div>
-            
+
             <div class="form-group checkbox-group" style="width: 100%; text-align: left;">
                 <input type="checkbox" id="terms" required>
-                <label for="terms" style="font-size: 0.9rem;">I accept the <a href="#" style="color: var(--primary); font-weight: 500;">Terms & Conditions</a></label>
+                <label for="terms" style="font-size: 0.9rem;">I accept the <a href="#"
+                        style="color: var(--primary); font-weight: 500;">Terms & Conditions</a></label>
             </div>
-            
+
             <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Register</button>
         </form>
-        
+
         <div class="auth-divider">OR</div>
-        
+
         <button class="social-btn google-btn">
-             <span style="font-size: 1.25rem;">G</span> Continue with Google
+            <span style="font-size: 1.25rem;">G</span> Continue with Google
         </button>
-        
+
         <button class="social-btn email-btn">
-             <span style="font-size: 1.25rem;">✉</span> Continue with Email
+            <span style="font-size: 1.25rem;">✉</span> Continue with Email
         </button>
-        
+
         <div style="margin-top: 30px; font-size: 0.95rem;">
             Already have an account? <a href="login.html" style="color: var(--primary); font-weight: 600;">Login</a>
         </div>
@@ -60,4 +75,5 @@
 
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

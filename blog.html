@@ -1,25 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farm Blog | GoatFarm</title>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <style>
-        .page-header { background: var(--primary); color: white; padding: 120px 0 60px; text-align: center; }
-        .blog-card { text-align: left; }
-        .blog-card .card-body { align-items: flex-start; text-align: left; }
-        .blog-meta { font-size: 0.85rem; color: var(--primary); font-weight: 500; margin-bottom: 10px; }
+        .page-header {
+            background: var(--primary);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        .blog-card {
+            text-align: left;
+        }
+
+        .blog-card .card-body {
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .blog-meta {
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            #main-blog-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Header / Navbar -->
     <header class="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="brand-logo">GoatFarm</a>
-            <div class="nav-menu-wrapper" style="display:flex; justify-content: space-between; align-items: center; width:100%">
+            <a href="index.html" class="logo"><img src="assets/images/logo.svg" alt="GoatFarm" style="height: 40px;"></a>
+            <div class="nav-menu-wrapper"
+                style="display:flex; justify-content: space-between; align-items: center; width:100%">
+                <div class="mobile-menu-logo" style="display: none; width: 100%; padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid rgba(0,0,0,0.1);">
+                    <img src="assets/images/logo.svg" alt="GoatFarm" style="height: 40px;">
+                </div>
                 <ul class="nav-menu" style="margin-left: auto; margin-right: 20px;">
                     <li class="nav-item"><a href="index.html">Home</a></li>
                     <li class="nav-item"><a href="index-2.html">Home 2</a></li>
@@ -41,87 +74,142 @@
         </div>
     </header>
 
-    <div class="page-header">
+    <div class="page-header"
+        style="background: linear-gradient(rgba(138, 154, 91, 0.8), rgba(138, 154, 91, 0.8)), url('assets/images/sunrise-class.png'); background-size: cover; background-position: center; padding: 160px 0 100px;">
         <div class="container">
-            <h1 class="animate-up">Farm Journal</h1>
-            <p class="animate-up delay-1" style="opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 1.1rem;">Stories from the pasture, wellness tips, and goat shenanigans.</p>
+            <h1 class="animate-up" style="color: white; text-shadow: 0 5px 15px rgba(0,0,0,0.2);">Farm Journal</h1>
+            <p class="animate-up delay-1"
+                style="color: white; opacity: 1; max-width: 600px; margin: 0 auto; font-size: 1.25rem;">Stories from the
+                pasture, wellness tips, and goat shenanigans.</p>
         </div>
     </div>
 
     <!-- Blog Section -->
     <section class="section">
         <div class="container">
-            
-            <div class="grid grid-3">
+
+            <div class="grid grid-3" id="main-blog-grid">
                 <!-- Post 1 -->
                 <div class="card blog-card">
-                    <div class="card-img-wrapper"><img src="assets/images/hero.png" alt="Goat Yoga Benefits" class="card-img"></div>
+                    <div class="card-img-wrapper"><img src="assets/images/sunset-yoga.png" alt="Goat Yoga Benefits"
+                            class="card-img"></div>
                     <div class="card-body" style="padding: 30px;">
-                        <span class="blog-meta">Wellness • Oct 10, 2024</span>
-                        <h3 class="card-title" style="margin-bottom: 15px; font-size: 1.5rem;">5 Mental Health Benefits of Goat Yoga</h3>
-                        <p class="card-text">Discover why animal therapy combined with mindful movement is scientifically proven to lower cortisol and increase joy.</p>
-                        <a href="#" class="btn btn-outline" style="align-self: flex-start; margin-top: auto;">Read Article</a>
+                        <span class="blog-meta">Wellness • Oct 10, 2026</span>
+                        <h3 class="card-title" style="margin-bottom: 15px; font-size: 1.5rem;">5 Mental Health Benefits
+                            of Goat Yoga</h3>
+                        <p class="card-text">Discover why animal therapy combined with mindful movement is
+                            scientifically proven to lower cortisol and increase joy.</p>
+                        <a href="#" class="btn btn-outline" style="align-self: flex-start; margin-top: auto;">Read
+                            Article</a>
                     </div>
                 </div>
 
                 <!-- Post 2 -->
                 <div class="card blog-card">
-                    <div class="card-img-wrapper"><img src="assets/images/goat2.png" alt="Baby Goats" class="card-img"></div>
+                    <div class="card-img-wrapper"><img src="assets/images/pip.png" alt="Baby Goats" class="card-img">
+                    </div>
                     <div class="card-body" style="padding: 30px;">
-                        <span class="blog-meta">Farm Life • Oct 02, 2024</span>
-                        <h3 class="card-title" style="margin-bottom: 15px; font-size: 1.5rem;">Welcome the Spring Kids!</h3>
-                        <p class="card-text">We are thrilled to announce the arrival of three new baby goats to the herd. Meet Jasper, Clementine, and Oakhill.</p>
-                        <a href="#" class="btn btn-outline" style="align-self: flex-start; margin-top: auto;">Read Article</a>
+                        <span class="blog-meta">Farm Life • Oct 02, 2026</span>
+                        <h3 class="card-title" style="margin-bottom: 15px; font-size: 1.5rem;">Welcome the Spring Kids!
+                        </h3>
+                        <p class="card-text">We are thrilled to announce the arrival of three new baby goats to the
+                            herd. Meet Jasper, Clementine, and Oakhill.</p>
+                        <a href="#" class="btn btn-outline" style="align-self: flex-start; margin-top: auto;">Read
+                            Article</a>
                     </div>
                 </div>
 
                 <!-- Post 3 -->
                 <div class="card blog-card">
-                    <div class="card-img-wrapper"><img src="assets/images/soap.png" alt="Soap Making" class="card-img"></div>
+                    <div class="card-img-wrapper"><img src="assets/images/lavender-soap.png" alt="Soap Making"
+                            class="card-img"></div>
                     <div class="card-body" style="padding: 30px;">
-                        <span class="blog-meta">Crafts • Sep 25, 2024</span>
-                        <h3 class="card-title" style="margin-bottom: 15px; font-size: 1.5rem;">The Art of Goat Milk Soap Making</h3>
-                        <p class="card-text">Take a behind-the-scenes look at how we handcraft our popular lavender and oatmeal soaps right here on the farm.</p>
-                        <a href="#" class="btn btn-outline" style="align-self: flex-start; margin-top: auto;">Read Article</a>
+                        <span class="blog-meta">Crafts • Sep 25, 2026</span>
+                        <h3 class="card-title" style="margin-bottom: 15px; font-size: 1.5rem;">The Art of Goat Milk Soap
+                            Making</h3>
+                        <p class="card-text">Take a behind-the-scenes look at how we handcraft our popular lavender and
+                            oatmeal soaps right here on the farm.</p>
+                        <a href="#" class="btn btn-outline" style="align-self: flex-start; margin-top: auto;">Read
+                            Article</a>
                     </div>
                 </div>
-                
-                 <!-- Post 4 -->
-                 <div class="card blog-card">
-                    <div class="card-img-wrapper"><img src="assets/images/barn.png" alt="Barn renovation" class="card-img"></div>
+
+                <!-- Post 4 -->
+                <div class="card blog-card">
+                    <div class="card-img-wrapper"><img src="assets/images/sunrise-class.png" alt="Barn renovation"
+                            class="card-img"></div>
                     <div class="card-body" style="padding: 30px;">
-                        <span class="blog-meta">Farm Updates • Sep 10, 2024</span>
-                        <h3 class="card-title" style="margin-bottom: 15px; font-size: 1.5rem;">Our Historic Barn Renovation</h3>
-                        <p class="card-text">See the incredible before and after photos of our 100-year-old barn, now a beautiful yoga studio sanctuary.</p>
-                        <a href="#" class="btn btn-outline" style="align-self: flex-start; margin-top: auto;">Read Article</a>
+                        <span class="blog-meta">Farm Updates • Sep 10, 2026</span>
+                        <h3 class="card-title" style="margin-bottom: 15px; font-size: 1.5rem;">Our Historic Barn
+                            Renovation</h3>
+                        <p class="card-text">See the incredible before and after photos of our 100-year-old barn, now a
+                            beautiful yoga studio sanctuary.</p>
+                        <a href="#" class="btn btn-outline" style="align-self: flex-start; margin-top: auto;">Read
+                            Article</a>
                     </div>
                 </div>
-                
+
                 <!-- Post 5 -->
-                 <div class="card blog-card">
-                    <div class="card-img-wrapper"><img src="assets/images/hero.png" alt="Beginners Guide" class="card-img"></div>
+                <div class="card blog-card">
+                    <div class="card-img-wrapper"><img src="assets/images/meadow-class.png" alt="Beginners Guide"
+                            class="card-img"></div>
                     <div class="card-body" style="padding: 30px;">
-                        <span class="blog-meta">Yoga • Aug 22, 2024</span>
-                        <h3 class="card-title" style="margin-bottom: 15px; font-size: 1.5rem;">Beginner's Guide to Outdoor Yoga</h3>
-                        <p class="card-text">Nervous about your first class? Here's everything you need to know about what to wear, bring, and expect.</p>
-                        <a href="#" class="btn btn-outline" style="align-self: flex-start; margin-top: auto;">Read Article</a>
+                        <span class="blog-meta">Yoga • Aug 22, 2026</span>
+                        <h3 class="card-title" style="margin-bottom: 15px; font-size: 1.5rem;">Beginner's Guide to
+                            Outdoor Yoga</h3>
+                        <p class="card-text">Nervous about your first class? Here's everything you need to know about
+                            what to wear, bring, and expect.</p>
+                        <a href="#" class="btn btn-outline" style="align-self: flex-start; margin-top: auto;">Read
+                            Article</a>
                     </div>
                 </div>
-                
+
                 <!-- Post 6 -->
-                 <div class="card blog-card">
-                    <div class="card-img-wrapper"><img src="assets/images/goat2.png" alt="Community" class="card-img"></div>
+                <div class="card blog-card">
+                    <div class="card-img-wrapper"><img src="assets/images/happy-herd.png" alt="Community"
+                            class="card-img"></div>
                     <div class="card-body" style="padding: 30px;">
-                        <span class="blog-meta">Community • Aug 05, 2024</span>
-                        <h3 class="card-title" style="margin-bottom: 15px; font-size: 1.5rem;">GoatFarm Community Highlight</h3>
-                        <p class="card-text">Read the inspiring story of Sarah, one of our regular students who found healing and community at the farm.</p>
-                        <a href="#" class="btn btn-outline" style="align-self: flex-start; margin-top: auto;">Read Article</a>
+                        <span class="blog-meta">Community • Aug 05, 2026</span>
+                        <h3 class="card-title" style="margin-bottom: 15px; font-size: 1.5rem;">GoatFarm Community
+                            Highlight</h3>
+                        <p class="card-text">Read the inspiring story of Sarah, one of our regular students who found
+                            healing and community at the farm.</p>
+                        <a href="#" class="btn btn-outline" style="align-self: flex-start; margin-top: auto;">Read
+                            Article</a>
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center" style="margin-top: 50px; text-align: center;">
                 <button class="btn btn-secondary">Load More articles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Goat of the Month (New Section) -->
+    <section class="section" style="background-color: var(--bg-secondary); overflow: hidden;">
+        <div class="container">
+            <div class="grid grid-2"
+                style="align-items: center; background: white; border-radius: 30px; padding: 0; box-shadow: 0 20px 40px rgba(0,0,0,0.05); overflow: hidden;">
+                <div style="padding: 60px;">
+                    <span
+                        style="background: var(--accent); color: var(--text-dark); padding: 5px 15px; border-radius: 20px; font-weight: 600; font-size: 0.9rem; margin-bottom: 20px; display: inline-block;">Spotlight</span>
+                    <h2 style="font-size: 3rem; margin-bottom: 20px;">Goat of the Month: Barny</h2>
+                    <p style="font-size: 1.25rem; opacity: 0.8; margin-bottom: 30px;">This month, we're celebrating our
+                        resident mischief-maker, Barnaby! Known for his impeccable timing and love for purple yoga mats,
+                        Barnaby has been voted "Most Likely to Disrupt a Savasana" three years in a row.</p>
+                    <ul style="margin-bottom: 30px; list-style: none;">
+                        <li style="margin-bottom: 10px;">🏆 <strong>Specialty:</strong> Mat Nibbling</li>
+                        <li style="margin-bottom: 10px;">⭐ <strong>Favorite Pose:</strong> Downward Dog (to walk under)
+                        </li>
+                        <li>🥕 <strong>Top Snack:</strong> Dried Honey Apricots</li>
+                    </ul>
+                    <a href="classes.html" class="btn btn-primary">Book a Class with Barnaby</a>
+                </div>
+                <div style="height: 100%; min-height: 500px;">
+                    <img src="assets/images/barnaby.png" alt="Barnaby"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
             </div>
         </div>
     </section>
@@ -130,15 +218,42 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col" style="text-align: left;"><h3 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 1rem;">GoatFarm</h3><p>A fun, whimsical platform offering organic goat yoga experiences in a beautiful farm setting.</p></div>
-                <div class="footer-col" style="text-align: left;"><h4>Quick Links</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="classes.html">Classes</a></li><li><a href="shop.html">Shop</a></li><li><a href="blog.html">Blog</a></li></ul></div>
-                <div class="footer-col" style="text-align: left;"><h4>Contact Us</h4><ul class="footer-links"><li>123 Meadow Lane</li><li>Farmington, NY 12345</li><li><a href="mailto:hello@goatfarm.com">hello@goatfarm.com</a></li><li><a href="tel:+15551234567">(555) 123-4567</a></li></ul></div>
-                <div class="footer-col" style="text-align: left;"><h4>Newsletter</h4><p style="margin-bottom: 15px;">Subscribe for farm updates.</p><form style="display: flex; gap: 10px;"><input type="email" placeholder="Email Address" style="padding: 10px; border-radius: 8px; border: none; flex-grow: 1;"><button type="submit" class="btn btn-secondary" style="padding: 10px 15px;">Go</button></form></div>
+                <div class="footer-col" style="text-align: left;">
+                    <div style="margin-bottom: 1rem;"><img src="assets/images/logo.svg" alt="GoatFarm" style="height: 40px;"></div>
+                    <p>A fun, whimsical platform offering organic goat yoga experiences in a beautiful farm setting.</p>
+                </div>
+                <div class="footer-col" style="text-align: left;">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="classes.html">Classes</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" style="text-align: left;">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li>123 Meadow Lane</li>
+                        <li>Farmington, NY 12345</li>
+                        <li><a href="mailto:hello@goatfarm.com">hello@goatfarm.com</a></li>
+                        <li><a href="tel:+15551234567">(555) 123-4567</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" style="text-align: left;">
+                    <h4>Newsletter</h4>
+                    <p style="margin-bottom: 15px;">Subscribe for farm updates.</p>
+                    <form style="display: flex; gap: 10px;"><input type="email" placeholder="Email Address"
+                            style="padding: 10px; border-radius: 8px; border: none; flex-grow: 1;"><button type="submit"
+                            class="btn btn-secondary" style="padding: 10px 15px;">Go</button></form>
+                </div>
             </div>
-            <div class="footer-bottom">&copy; 2024 GoatFarm. All rights reserved. Built with love for goats.</div>
+            <div class="footer-bottom">&copy; 2026 GoatFarm. All rights reserved. Built with love for goats.</div>
         </div>
     </footer>
+    <button class="back-to-top" title="Back to Top">↑</button>
 
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

@@ -1,19 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoatFarm | Fun & Organic Goat Yoga</title>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <style>
+        @media (min-width: 769px) {
+            .hero-split {
+                grid-template-columns: 1.1fr 0.9fr !important;
+                text-align: left !important;
+                display: grid !important;
+                align-items: center !important;
+                min-height: auto !important;
+                padding-top: 100px !important;
+                padding-bottom: 40px !important;
+            }
+
+            .hero-content {
+                text-align: left !important;
+            }
+
+            .hero-actions {
+                justify-content: flex-start !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-split {
+                padding-top: 140px !important;
+                padding-bottom: 60px !important;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            #home2-farm-stats {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+
+            .grid-4 {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- Header / Navbar -->
     <header class="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="brand-logo">GoatFarm</a>
-            <div class="nav-menu-wrapper" style="display:flex; justify-content: space-between; align-items: center; width:100%">
+            <a href="index.html" class="logo"><img src="assets/images/logo.svg" alt="GoatFarm" style="height: 40px;"></a>
+            <div class="nav-menu-wrapper"
+                style="display:flex; justify-content: space-between; align-items: center; width:100%">
+                <div class="mobile-menu-logo" style="display: none; width: 100%; padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid rgba(0,0,0,0.1);">
+                    <img src="assets/images/logo.svg" alt="GoatFarm" style="height: 40px;">
+                </div>
                 <ul class="nav-menu" style="margin-left: auto; margin-right: 20px;">
                     <li class="nav-item"><a href="index.html">Home</a></li>
                     <li class="nav-item"><a href="index-2.html">Home 2</a></li>
@@ -39,45 +86,53 @@
     <section class="hero-split container">
         <div class="hero-content animate-up delay-1" style="text-align: left;">
             <h1 class="hero-title">Experience Yoga Like Never Before.</h1>
-            <p class="hero-subtitle">Breathe in the farm air, flow through the poses, and let our playful goats bring a smile to your face. It's wellness mixed with pure joy!</p>
+            <p class="hero-subtitle">Breathe in the farm air, flow through the poses, and let our playful goats bring a
+                smile to your face. It's wellness mixed with pure joy!</p>
             <div class="hero-actions" style="justify-content: flex-start;">
                 <a href="classes.html" class="btn btn-primary">See Schedule</a>
                 <a href="shop.html" class="btn btn-outline">Shop Farm Goods</a>
             </div>
             <div style="margin-top: 40px; display: flex; gap: 20px; align-items: center;">
-                <img src="assets/images/goat2.png" alt="Happy customers" style="width: 50px; height: 50px; border-radius: 50%; border: 3px solid var(--bg-color);">
-                <img src="assets/images/hero.png" alt="Happy customers" style="width: 50px; height: 50px; border-radius: 50%; border: 3px solid var(--bg-color); margin-left: -35px;">
-                <img src="assets/images/barn.png" alt="Happy customers" style="width: 50px; height: 50px; border-radius: 50%; border: 3px solid var(--bg-color); margin-left: -35px;">
+                <img src="assets/images/daisy.png" alt="Happy customers"
+                    style="width: 50px; height: 50px; border-radius: 50%; border: 3px solid var(--bg-color);">
+                <img src="assets/images/barnaby.png" alt="Happy customers"
+                    style="width: 50px; height: 50px; border-radius: 50%; border: 3px solid var(--bg-color); margin-left: -35px;">
+                <img src="assets/images/luna.png" alt="Happy customers"
+                    style="width: 50px; height: 50px; border-radius: 50%; border: 3px solid var(--bg-color); margin-left: -35px;">
                 <span style="font-weight: 500; margin-left: 10px;">Join 500+ happy yogis</span>
             </div>
         </div>
-        <div class="hero-img-container animate-up delay-2" style="border-radius: 30px; box-shadow: -20px 20px 0px var(--accent);">
+        <div class="hero-img-container animate-up delay-2"
+            style="border-radius: 30px; box-shadow: -20px 20px 0px var(--accent);">
             <img src="assets/images/hero.png" alt="Goat yoga" class="hero-img" style="border-radius: 30px;">
         </div>
     </section>
 
-    <!-- Experience Highlights -->
+    <!-- Experience
     <section class="section" style="background-color: var(--primary); color: #fff;">
         <div class="container">
             <div class="grid grid-3 text-center" style="text-align: center;" id="home2-experience-highlights">
                 <div style="padding: 20px;">
                     <div style="font-size: 3rem; margin-bottom: 20px;">🧘‍♀️</div>
                     <h3 style="color: #fff;">Mindful Flow</h3>
-                    <p style="opacity: 0.9;">Professional instructors guiding you through relaxing and safe yoga flows tailored for all levels.</p>
+                    <p style="opacity: 0.9;">Professional instructors guiding you through relaxing and safe yoga flows
+                        tailored for all levels.</p>
                 </div>
                 <div style="padding: 20px;">
                     <div style="font-size: 3rem; margin-bottom: 20px;">🐐</div>
                     <h3 style="color: #fff;">Animal Therapy</h3>
-                    <p style="opacity: 0.9;">The gentle presence and playful antics of our goats naturally lower stress and boost endorphins.</p>
+                    <p style="opacity: 0.9;">The gentle presence and playful antics of our goats naturally lower stress
+                        and boost endorphins.</p>
                 </div>
                 <div style="padding: 20px;">
                     <div style="font-size: 3rem; margin-bottom: 20px;">🌿</div>
                     <h3 style="color: #fff;">Nature Connection</h3>
-                    <p style="opacity: 0.9;">Practice in our open-air barn or grassy meadows surrounded by fresh air and serene landscapes.</p>
+                    <p style="opacity: 0.9;">Practice in our open-air barn or grassy meadows surrounded by fresh air and
+                        serene landscapes.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </section> Highlights -->
 
     <!-- Farm Highlights Image Grid -->
     <section class="section" style="background-color: var(--bg-secondary);">
@@ -93,23 +148,26 @@
                     </div>
                     <div class="card-body" style="padding: 20px 0;">
                         <h3 class="card-title" style="font-size: 1.5rem;">The Yoga Barn</h3>
-                        <p class="card-text">A rustic, open-air barn built for perfect yoga flow and absolute serenity.</p>
+                        <p class="card-text">A rustic, open-air barn built for perfect yoga flow and absolute serenity.
+                        </p>
                     </div>
                 </div>
-                
-                <div class="card" style="box-shadow: none; background: transparent; display: flex; flex-direction: column;">
+
+                <div class="card"
+                    style="box-shadow: none; background: transparent; display: flex; flex-direction: column;">
                     <div class="card-body" style="padding: 0 0 20px 0; order: 2;">
                         <h3 class="card-title" style="font-size: 1.5rem; margin-top: 15px;">Meadow Pastures</h3>
-                        <p class="card-text">Lush green fields where the magic happens dynamically under the open sky.</p>
+                        <p class="card-text">Lush green fields where the magic happens dynamically under the open sky.
+                        </p>
                     </div>
                     <div class="card-img-wrapper" style="height: 300px; border-radius: 20px; order: 1;">
                         <img src="assets/images/hero.png" alt="Meadow" class="card-img">
                     </div>
                 </div>
-                
+
                 <div class="card" style="box-shadow: none; background: transparent;">
                     <div class="card-img-wrapper" style="height: 300px; border-radius: 20px;">
-                        <img src="assets/images/goat2.png" alt="Happy Goats" class="card-img">
+                        <img src="assets/images/happy-herd.png" alt="Happy Goats" class="card-img">
                     </div>
                     <div class="card-body" style="padding: 20px 0;">
                         <h3 class="card-title" style="font-size: 1.5rem;">Happy Herds</h3>
@@ -124,17 +182,32 @@
     <section class="section" style="background-color: var(--card-bg);">
         <div class="container">
             <div class="grid grid-3 text-center" style="text-align: center;" id="home2-farm-stats">
-                <div class="stat-card" style="padding: 40px 30px; border-radius: var(--border-radius); background: var(--bg-secondary); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-                    <h2 style="font-size: 4rem; color: var(--primary); font-family: var(--font-display); margin-bottom: 10px;">5k+</h2>
-                    <p style="font-size: 1.2rem; font-weight: 500; font-family: var(--font-body); opacity: 0.8;">Happy Yogis</p>
+                <div class="stat-card"
+                    style="padding: 40px 30px; border-radius: var(--border-radius); background: var(--bg-secondary); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer;"
+                    onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                    <h2
+                        style="font-size: 4rem; color: var(--primary); font-family: var(--font-display); margin-bottom: 10px;">
+                        5k+</h2>
+                    <p style="font-size: 1.2rem; font-weight: 500; font-family: var(--font-body); opacity: 0.8;">Happy
+                        Yogis</p>
                 </div>
-                <div class="stat-card" style="padding: 40px 30px; border-radius: var(--border-radius); background: var(--bg-secondary); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-                    <h2 style="font-size: 4rem; color: var(--accent); font-family: var(--font-display); margin-bottom: 10px;">24</h2>
-                    <p style="font-size: 1.2rem; font-weight: 500; font-family: var(--font-body); opacity: 0.8;">Playful Goats</p>
+                <div class="stat-card"
+                    style="padding: 40px 30px; border-radius: var(--border-radius); background: var(--bg-secondary); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer;"
+                    onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                    <h2
+                        style="font-size: 4rem; color: var(--accent); font-family: var(--font-display); margin-bottom: 10px;">
+                        24</h2>
+                    <p style="font-size: 1.2rem; font-weight: 500; font-family: var(--font-body); opacity: 0.8;">Playful
+                        Goats</p>
                 </div>
-                <div class="stat-card" style="padding: 40px 30px; border-radius: var(--border-radius); background: var(--bg-secondary); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-                    <h2 style="font-size: 4rem; color: var(--primary); font-family: var(--font-display); margin-bottom: 10px;">300+</h2>
-                    <p style="font-size: 1.2rem; font-weight: 500; font-family: var(--font-body); opacity: 0.8;">Acres of Nature</p>
+                <div class="stat-card"
+                    style="padding: 40px 30px; border-radius: var(--border-radius); background: var(--bg-secondary); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer;"
+                    onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                    <h2
+                        style="font-size: 4rem; color: var(--primary); font-family: var(--font-display); margin-bottom: 10px;">
+                        300+</h2>
+                    <p style="font-size: 1.2rem; font-weight: 500; font-family: var(--font-body); opacity: 0.8;">Acres
+                        of Nature</p>
                 </div>
             </div>
         </div>
@@ -147,55 +220,96 @@
                 <h2>Farm Shop Highlights</h2>
                 <p>Support the farm with these handcrafted goods</p>
             </div>
-            
+
             <div class="grid grid-4">
                 <div class="card">
                     <div class="card-img-wrapper" style="height: 200px;">
-                        <img src="assets/images/soap.png" alt="Goat Milk Soap" class="card-img">
+                        <img src="assets/images/lavender-soap.png" alt="Goat Milk Soap" class="card-img">
                     </div>
                     <div class="card-body" style="padding: 20px;">
                         <h3 class="card-title" style="font-size: 1.25rem;">Lavender Goat Milk Soap</h3>
                         <p style="font-size: 1.1rem; font-weight: 600; color: var(--primary);">$12.00</p>
-                        <a href="shop.html" class="btn btn-outline" style="width: 100%; margin-top: 15px;">Add to Cart</a>
+                        <a href="shop.html" class="btn btn-outline" style="width: 100%; margin-top: 15px;">Add to
+                            Cart</a>
                     </div>
                 </div>
-                
+
                 <div class="card">
                     <div class="card-img-wrapper" style="height: 200px;">
-                        <img src="assets/images/soap.png" alt="Oatmeal Soap" class="card-img">
+                        <img src="assets/images/oatmeal-soap.png" alt="Oatmeal Soap" class="card-img">
                     </div>
                     <div class="card-body" style="padding: 20px;">
                         <h3 class="card-title" style="font-size: 1.25rem;">Oatmeal Honey Soap</h3>
                         <p style="font-size: 1.1rem; font-weight: 600; color: var(--primary);">$12.00</p>
-                        <a href="shop.html" class="btn btn-outline" style="width: 100%; margin-top: 15px;">Add to Cart</a>
+                        <a href="shop.html" class="btn btn-outline" style="width: 100%; margin-top: 15px;">Add to
+                            Cart</a>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-img-wrapper" style="height: 200px;">
-                        <img src="assets/images/goat2.png" alt="Farm T-Shirt" class="card-img" style="object-position: top;">
+                        <img src="assets/images/t-shirt.png" alt="Farm T-Shirt" class="card-img"
+                            style="object-position: top;">
                     </div>
                     <div class="card-body" style="padding: 20px;">
                         <h3 class="card-title" style="font-size: 1.25rem;">"Just Kidding" T-Shirt</h3>
                         <p style="font-size: 1.1rem; font-weight: 600; color: var(--primary);">$25.00</p>
-                        <a href="shop.html" class="btn btn-outline" style="width: 100%; margin-top: 15px;">Add to Cart</a>
+                        <a href="shop.html" class="btn btn-outline" style="width: 100%; margin-top: 15px;">Add to
+                            Cart</a>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-img-wrapper" style="height: 200px;">
-                        <img src="assets/images/barn.png" alt="Yoga Mat" class="card-img">
+                        <img src="assets/images/yoga-mat.png" alt="Yoga Mat" class="card-img">
                     </div>
                     <div class="card-body" style="padding: 20px;">
                         <h3 class="card-title" style="font-size: 1.25rem;">Eco Cork Yoga Mat</h3>
                         <p style="font-size: 1.1rem; font-weight: 600; color: var(--primary);">$65.00</p>
-                        <a href="shop.html" class="btn btn-outline" style="width: 100%; margin-top: 15px;">Add to Cart</a>
+                        <a href="shop.html" class="btn btn-outline" style="width: 100%; margin-top: 15px;">Add to
+                            Cart</a>
                     </div>
                 </div>
             </div>
-            
+
             <div style="text-align: center; margin-top: 40px;">
                 <a href="shop.html" class="btn btn-secondary">Visit Full Store</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bespoke Private Events (New Section) -->
+    <section class="section" style="background-color: var(--primary); color: white; padding: 100px 0;">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: center; gap: 60px;">
+                <div>
+                    <h2 style="font-size: 3.5rem; color: white; margin-bottom: 25px;">Bespoke Birthdays & Corporate
+                        Retreats</h2>
+                    <p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 40px;">Looking for a team-building
+                        experience that people will actually talk about? Or a birthday party that's truly unforgettable?
+                        Book a private pasture experience customized just for your group.</p>
+                    <div class="grid grid-2" style="gap: 20px;">
+                        <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 15px;">
+                            <h4 style="margin-bottom: 10px;">The Party Barn</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">Up to 25 people with exclusive barn access and
+                                baby goats.</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 15px;">
+                            <h4 style="margin-bottom: 10px;">Corporate Zen</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">Team-building flows designed to boost morale and
+                                lower stress.</p>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-secondary"
+                        style="margin-top: 40px; padding: 16px 40px;">Enquire Now</a>
+                </div>
+                <div style="position: relative;">
+                    <div
+                        style="position: absolute; top: -20px; right: -20px; width: 100%; height: 100%; border: 5px solid var(--accent); border-radius: 30px; z-index: -1;">
+                    </div>
+                    <img src="assets/images/happy-herd.png" alt="Group Events"
+                        style="width: 100%; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+                </div>
             </div>
         </div>
     </section>
@@ -205,7 +319,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col" style="text-align: left;">
-                    <h3 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 1rem;">GoatFarm</h3>
+                    <div style="margin-bottom: 1rem;"><img src="assets/images/logo.svg" alt="GoatFarm" style="height: 40px;"></div>
                     <p>A fun, whimsical platform offering organic goat yoga experiences in a beautiful farm setting.</p>
                 </div>
                 <div class="footer-col" style="text-align: left;">
@@ -230,17 +344,21 @@
                     <h4>Newsletter</h4>
                     <p style="margin-bottom: 15px;">Subscribe for farm updates.</p>
                     <form style="display: flex; gap: 10px;">
-                        <input type="email" placeholder="Email Address" style="padding: 10px; border-radius: 8px; border: none; flex-grow: 1;">
+                        <input type="email" placeholder="Email Address"
+                            style="padding: 10px; border-radius: 8px; border: none; flex-grow: 1;">
                         <button type="submit" class="btn btn-secondary" style="padding: 10px 15px;">Go</button>
                     </form>
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; 2024 GoatFarm. All rights reserved. Built with love for goats.
+                &copy; 2026 GoatFarm. All rights reserved. Built with love for goats.
             </div>
         </div>
     </footer>
 
+    <button class="back-to-top" title="Back to Top">↑</button>
+
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

@@ -1,24 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoatFarm | Fun & Organic Goat Yoga</title>
-    <meta name="description" content="Find your inner peace with goats! A whimsical, fun platform that sells the unique experience of doing yoga with goats.">
-    
+    <meta name="description"
+        content="Find your inner peace with goats! A whimsical, fun platform that sells the unique experience of doing yoga with goats.">
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <style>
+        @media (min-width: 768px) and (max-width: 1024px) {
+
+            #home-upcoming-classes,
+            #home-testimonials-grid {
+                display: flex !important;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 24px;
+            }
+
+            #home-upcoming-classes .card,
+            #home-testimonials-grid .card {
+                flex: 0 0 calc(50% - 24px);
+                max-width: calc(50% - 24px);
+            }
+
+            #home-upcoming-classes .card:last-child,
+            #home-testimonials-grid .card:last-child {
+                flex: 0 0 calc(50% - 24px);
+            }
+
+            .grid-4 {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .hero-actions {
+                flex-direction: row !important;
+                justify-content: center !important;
+                gap: 20px !important;
+            }
+
+            .hero-actions .btn {
+                width: auto !important;
+            }
+        }
+
+        /* Follow the Herd Hover Effects */
+        .gallery-item {
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            z-index: 5;
+        }
+
+        .gallery-item img {
+            transition: all 0.6s ease !important;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+            filter: brightness(0.8);
+        }
+
+        .gallery-item::after {
+            content: '📸';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.5);
+            font-size: 2rem;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 2;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(8px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            pointer-events: none;
+        }
+
+        .gallery-item:hover::after {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- Header / Navbar -->
     <header class="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="brand-logo">GoatFarm</a>
-            
-            <div class="nav-menu-wrapper" style="display:flex; justify-content: space-between; align-items: center; width:100%">
+            <a href="index.html" class="logo"><img src="assets/images/logo.svg" alt="GoatFarm" style="height: 40px;"></a>
+
+            <div class="nav-menu-wrapper"
+                style="display:flex; justify-content: space-between; align-items: center; width:100%">
+                <div class="mobile-menu-logo" style="display: none; width: 100%; padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid rgba(0,0,0,0.1);">
+                    <img src="assets/images/logo.svg" alt="GoatFarm" style="height: 40px;">
+                </div>
                 <ul class="nav-menu" style="margin-left: auto; margin-right: 20px;">
                     <li class="nav-item"><a href="index.html">Home</a></li>
                     <li class="nav-item"><a href="index-2.html">Home 2</a></li>
@@ -28,7 +124,7 @@
                     <li class="nav-item"><a href="contact.html">Contact</a></li>
                     <li class="nav-item"><a href="dashboard.html">Dashboard</a></li>
                 </ul>
-                
+
                 <div class="nav-actions">
                     <button class="rtl-toggle theme-toggle" title="Toggle RTL" style="margin-right: 5px;">🌐</button>
                     <button class="theme-toggle">🌙</button>
@@ -50,11 +146,12 @@
         <div class="container">
             <div class="hero-content animate-up delay-1">
                 <h1 class="hero-title">Find Your Inner Peace...<br>With Goats!</h1>
-                <p class="hero-subtitle">Disconnect from the chaos and reconnect with nature in the most playful way possible. Farm fresh air, yoga poses, and adorable baby goats jumping on your back!</p>
+                <p class="hero-subtitle">Disconnect from the chaos and reconnect with nature in the most playful way
+                    possible. Farm fresh air, yoga poses, and adorable baby goats jumping on your back!</p>
                 <div class="hero-actions">
                     <a href="classes.html" class="btn btn-primary">Book a Class</a>
                 </div>
-                
+
                 <div class="hero-img-container animate-up delay-2">
                     <img src="assets/images/hero.png" alt="People doing goat yoga outdoors" class="hero-img">
                 </div>
@@ -69,14 +166,17 @@
                 <h2>What is Goat Yoga?</h2>
                 <p>The perfect blend of mindfulness, laughter, and nature</p>
             </div>
-            
+
             <div class="grid grid-2" style="align-items: center;">
                 <div>
-                    <img src="assets/images/barn.png" alt="Yoga in the barn" style="border-radius: var(--border-radius); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <img src="assets/images/barn.png" alt="Yoga in the barn"
+                        style="border-radius: var(--border-radius); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                 </div>
                 <div>
                     <h3>Joy in the Unexpected</h3>
-                    <p style="margin-bottom: 20px;">Imagine attempting a downward dog while a baby goat curiously nibbles on your mat or gently hops onto your back. Goat yoga combines traditional yoga practices with the playful, spontaneous energy of goats.</p>
+                    <p style="margin-bottom: 20px;">Imagine attempting a downward dog while a baby goat curiously
+                        nibbles on your mat or gently hops onto your back. Goat yoga combines traditional yoga practices
+                        with the playful, spontaneous energy of goats.</p>
                     <ul style="opacity: 0.9;">
                         <li style="margin-bottom: 10px;">✅ Relieves stress and anxiety</li>
                         <li style="margin-bottom: 10px;">✅ Connects you with animals and nature</li>
@@ -95,7 +195,7 @@
                 <h2>Upcoming Classes</h2>
                 <p>Book your spot in the barn or the meadow</p>
             </div>
-            
+
             <div class="grid grid-3" id="home-upcoming-classes">
                 <!-- Class Card 1 -->
                 <div class="card">
@@ -103,40 +203,49 @@
                         <img src="assets/images/barn.png" alt="Sunrise Flow" class="card-img">
                     </div>
                     <div class="card-body">
-                        <span style="font-size: 0.9rem; color: var(--primary); font-weight: 600; margin-bottom: 10px;">Oct 12 | 8:00 AM</span>
+                        <span
+                            style="font-size: 0.9rem; color: var(--primary); font-weight: 600; margin-bottom: 10px;">Oct
+                            12 | 8:00 AM</span>
                         <h3 class="card-title">Sunrise Goat Flow</h3>
-                        <p class="card-text">Start your day with gentle stretching and energetic baby goats as the sun rises over the farm.</p>
+                        <p class="card-text">Start your day with gentle stretching and energetic baby goats as the sun
+                            rises over the farm.</p>
                         <a href="classes.html" class="btn btn-outline" style="width: 100%;">Book Spot ($35)</a>
                     </div>
                 </div>
-                
+
                 <!-- Class Card 2 -->
                 <div class="card">
                     <div class="card-img-wrapper">
                         <img src="assets/images/hero.png" alt="Meadow Vinyasa" class="card-img">
                     </div>
                     <div class="card-body">
-                        <span style="font-size: 0.9rem; color: var(--primary); font-weight: 600; margin-bottom: 10px;">Oct 14 | 10:30 AM</span>
+                        <span
+                            style="font-size: 0.9rem; color: var(--primary); font-weight: 600; margin-bottom: 10px;">Oct
+                            14 | 10:30 AM</span>
                         <h3 class="card-title">Meadow Vinyasa</h3>
-                        <p class="card-text">An outdoor vinyasa practice suitable for all levels, featuring our friendly adult goats.</p>
+                        <p class="card-text">An outdoor vinyasa practice suitable for all levels, featuring our friendly
+                            adult goats.</p>
                         <a href="classes.html" class="btn btn-outline" style="width: 100%;">Book Spot ($35)</a>
                     </div>
                 </div>
-                
+
                 <!-- Class Card 3 -->
                 <div class="card">
                     <div class="card-img-wrapper">
-                        <img src="assets/images/goat2.png" alt="Sunset Restore" class="card-img">
+                        <img src="assets/images/sunset-yoga.png" alt="Sunset Restore" class="card-img">
                     </div>
                     <div class="card-body">
-                        <span style="font-size: 0.9rem; color: var(--primary); font-weight: 600; margin-bottom: 10px;">Oct 15 | 6:00 PM</span>
+                        <span
+                            style="font-size: 0.9rem; color: var(--primary); font-weight: 600; margin-bottom: 10px;">Oct
+                            15 | 6:00 PM</span>
                         <h3 class="card-title">Sunset Restore</h3>
-                        <p class="card-text">Relax and unwind with restorative poses, warm sunset light, and cuddly sleepy goats.</p>
+                        <p class="card-text">Relax and unwind with restorative poses, warm sunset light, and cuddly
+                            sleepy goats.</p>
                         <a href="classes.html" class="btn btn-outline" style="width: 100%;">Book Spot ($35)</a>
                     </div>
                 </div>
             </div>
-            
+
             <div style="text-align: center; margin-top: 40px;">
                 <a href="classes.html" class="btn btn-secondary">View All Classes</a>
             </div>
@@ -150,46 +259,100 @@
                 <h2>Meet the Herd</h2>
                 <p>Our four-legged instructors are eager to meet you</p>
             </div>
-            
+
             <div class="grid grid-4">
                 <div class="card" style="text-align: center;">
-                    <div class="card-img-wrapper" style="border-radius: 50%; width: 150px; height: 150px; margin: 20px auto 0;">
-                        <img src="assets/images/goat2.png" alt="Daisy the Goat" class="card-img">
+                    <div class="card-img-wrapper"
+                        style="border-radius: 50%; width: 150px; height: 150px; margin: 20px auto 0;">
+                        <img src="assets/images/daisy.png" alt="Daisy the Goat" class="card-img">
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Daisy</h3>
                         <p class="card-text">The Yoga Master. Daisy loves standing on backs during plank pose.</p>
                     </div>
                 </div>
-                
+
                 <div class="card" style="text-align: center;">
-                    <div class="card-img-wrapper" style="border-radius: 50%; width: 150px; height: 150px; margin: 20px auto 0;">
-                        <img src="assets/images/goat2.png" alt="Barnaby" class="card-img">
+                    <div class="card-img-wrapper"
+                        style="border-radius: 50%; width: 150px; height: 150px; margin: 20px auto 0;">
+                        <img src="assets/images/barnaby.png" alt="Barnaby" class="card-img">
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Barnaby</h3>
                         <p class="card-text">The Nibbler. Will try to eat your yoga mat if you aren't looking.</p>
                     </div>
                 </div>
-                
+
                 <div class="card" style="text-align: center;">
-                    <div class="card-img-wrapper" style="border-radius: 50%; width: 150px; height: 150px; margin: 20px auto 0;">
-                        <img src="assets/images/goat2.png" alt="Luna" class="card-img">
+                    <div class="card-img-wrapper"
+                        style="border-radius: 50%; width: 150px; height: 150px; margin: 20px auto 0;">
+                        <img src="assets/images/luna.png" alt="Luna" class="card-img">
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Luna</h3>
                         <p class="card-text">The Snuggler. Needs mandatory pets before and after class.</p>
                     </div>
                 </div>
-                
+
                 <div class="card" style="text-align: center;">
-                    <div class="card-img-wrapper" style="border-radius: 50%; width: 150px; height: 150px; margin: 20px auto 0;">
-                        <img src="assets/images/goat2.png" alt="Pip" class="card-img">
+                    <div class="card-img-wrapper"
+                        style="border-radius: 50%; width: 150px; height: 150px; margin: 20px auto 0;">
+                        <img src="assets/images/pip.png" alt="Pip" class="card-img">
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Pip</h3>
                         <p class="card-text">The Acrobat. Expect Pip to jump on anything that stays still.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Follow the Herd (Social Gallery) -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Follow the Herd</h2>
+                <p>Catch the latest moments from @GoatFarm on Instagram</p>
+            </div>
+            <div class="grid grid-4" style="gap: 15px;">
+                <div style="height: 300px; border-radius: 15px; overflow: hidden; position: relative;"
+                    class="gallery-item">
+                    <img src="assets/images/daisy.png" alt="Daisy"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 300px; border-radius: 15px; overflow: hidden; position: relative;"
+                    class="gallery-item">
+                    <img src="assets/images/sunset-yoga.png" alt="Yoga"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 300px; border-radius: 15px; overflow: hidden; position: relative;"
+                    class="gallery-item">
+                    <img src="assets/images/barnaby.png" alt="Barnaby"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 300px; border-radius: 15px; overflow: hidden; position: relative;"
+                    class="gallery-item">
+                    <img src="assets/images/pip.png" alt="Pip" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 300px; border-radius: 15px; overflow: hidden; position: relative;"
+                    class="gallery-item">
+                    <img src="assets/images/meadow-class.png" alt="Meadow"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 300px; border-radius: 15px; overflow: hidden; position: relative;"
+                    class="gallery-item">
+                    <img src="assets/images/luna.png" alt="Luna" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 300px; border-radius: 15px; overflow: hidden; position: relative;"
+                    class="gallery-item">
+                    <img src="assets/images/happy-herd.png" alt="The Herd"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 300px; border-radius: 15px; overflow: hidden; position: relative;"
+                    class="gallery-item">
+                    <img src="assets/images/sunrise-class.png" alt="Sunrise"
+                        style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
             </div>
         </div>
@@ -202,28 +365,33 @@
                 <h2 style="color: #fff;">What Our Yogis Say</h2>
                 <p style="color: rgba(255,255,255,0.8);">Real experiences from the farm</p>
             </div>
-            
+
             <div class="grid grid-3" id="home-testimonials-grid">
                 <div class="card" style="background: rgba(255,255,255,0.1); color: #fff; box-shadow: none;">
                     <div class="card-body">
                         <div style="color: var(--accent); font-size: 1.5rem; margin-bottom: 15px;">★★★★★</div>
-                        <p class="card-text" style="opacity: 1; font-size: 1.1rem; font-style: italic;">"Best yoga experience of my life! The goats are so sweet and playful. It's impossible to be stressed here."</p>
+                        <p class="card-text" style="opacity: 1; font-size: 1.1rem; font-style: italic;">"Best yoga
+                            experience of my life! The goats are so sweet and playful. It's impossible to be stressed
+                            here."</p>
                         <h4 style="margin-top: 15px;">- Sarah J.</h4>
                     </div>
                 </div>
-                
+
                 <div class="card" style="background: rgba(255,255,255,0.1); color: #fff; box-shadow: none;">
                     <div class="card-body">
                         <div style="color: var(--accent); font-size: 1.5rem; margin-bottom: 15px;">★★★★★</div>
-                        <p class="card-text" style="opacity: 1; font-size: 1.1rem; font-style: italic;">"I came for the yoga, but I stayed for Barnaby the goat. The instructors are amazing and handle the goats perfectly."</p>
+                        <p class="card-text" style="opacity: 1; font-size: 1.1rem; font-style: italic;">"I came for the
+                            yoga, but I stayed for Barnaby the goat. The instructors are amazing and handle the goats
+                            perfectly."</p>
                         <h4 style="margin-top: 15px;">- Michael T.</h4>
                     </div>
                 </div>
-                
+
                 <div class="card" style="background: rgba(255,255,255,0.1); color: #fff; box-shadow: none;">
                     <div class="card-body">
                         <div style="color: var(--accent); font-size: 1.5rem; margin-bottom: 15px;">★★★★★</div>
-                        <p class="card-text" style="opacity: 1; font-size: 1.1rem; font-style: italic;">"A perfectly unique date idea! We had so much fun laughing and playing with the baby goats."</p>
+                        <p class="card-text" style="opacity: 1; font-size: 1.1rem; font-style: italic;">"A perfectly
+                            unique date idea! We had so much fun laughing and playing with the baby goats."</p>
                         <h4 style="margin-top: 15px;">- Emily R.</h4>
                     </div>
                 </div>
@@ -235,10 +403,15 @@
     <section class="section text-center" style="text-align: center; padding: 100px 0;">
         <div class="container">
             <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem);">Ready to Join the Herd?</h2>
-            <p style="font-size: 1.25rem; opacity: 0.8; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">Book a class today or subscribe to our newsletter for updates on special events and baby goat births!</p>
+            <p
+                style="font-size: 1.25rem; opacity: 0.8; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Book a class today or subscribe to our newsletter for updates on special events and baby goat births!
+            </p>
             <div class="hero-actions">
-                <a href="classes.html" class="btn btn-primary" style="padding: 16px 32px; font-size: 1.1rem;">Book a Class</a>
-                <a href="register.html" class="btn btn-secondary" style="padding: 16px 32px; font-size: 1.1rem;">Create Account</a>
+                <a href="classes.html" class="btn btn-primary" style="padding: 16px 32px; font-size: 1.1rem;">Book a
+                    Class</a>
+                <a href="register.html" class="btn btn-secondary" style="padding: 16px 32px; font-size: 1.1rem;">Create
+                    Account</a>
             </div>
         </div>
     </section>
@@ -248,10 +421,10 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col" style="text-align: left;">
-                    <h3 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 1rem;">GoatFarm</h3>
+                    <div style="margin-bottom: 1rem;"><img src="assets/images/logo.svg" alt="GoatFarm" style="height: 40px;"></div>
                     <p>A fun, whimsical platform offering organic goat yoga experiences in a beautiful farm setting.</p>
                 </div>
-                
+
                 <div class="footer-col" style="text-align: left;">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
@@ -261,7 +434,7 @@
                         <li><a href="blog.html">Blog</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col" style="text-align: left;">
                     <h4>Contact Us</h4>
                     <ul class="footer-links">
@@ -271,23 +444,27 @@
                         <li><a href="tel:+15551234567">(555) 123-4567</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col" style="text-align: left;">
                     <h4>Newsletter</h4>
                     <p style="margin-bottom: 15px;">Subscribe for farm updates.</p>
                     <form style="display: flex; gap: 10px;">
-                        <input type="email" placeholder="Email Address" style="padding: 10px; border-radius: 8px; border: none; flex-grow: 1;">
+                        <input type="email" placeholder="Email Address"
+                            style="padding: 10px; border-radius: 8px; border: none; flex-grow: 1;">
                         <button type="submit" class="btn btn-secondary" style="padding: 10px 15px;">Go</button>
                     </form>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
-                &copy; 2024 GoatFarm. All rights reserved. Built with love for goats.
+                &copy; 2026 GoatFarm. All rights reserved. Built with love for goats.
             </div>
         </div>
     </footer>
 
+    <button class="back-to-top" title="Back to Top">↑</button>
+
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

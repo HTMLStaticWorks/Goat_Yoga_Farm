@@ -9,6 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <style>
         .page-header {
             background: var(--primary);
@@ -35,6 +36,34 @@
             color: white;
             border-color: var(--primary);
         }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            #main-classes-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            #know-before-grid {
+                display: flex !important;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 24px;
+            }
+
+            #know-before-grid>div {
+                flex: 0 0 calc(50% - 24px);
+            }
+
+            #know-before-grid>div:last-child {
+                flex: 0 0 calc(50% - 24px);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            #know-before-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+                display: grid !important;
+            }
+        }
     </style>
 </head>
 
@@ -43,9 +72,12 @@
     <!-- Header / Navbar -->
     <header class="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="brand-logo">GoatFarm</a>
+            <a href="index.html" class="logo"><img src="assets/images/logo.svg" alt="GoatFarm" style="height: 40px;"></a>
             <div class="nav-menu-wrapper"
                 style="display:flex; justify-content: space-between; align-items: center; width:100%">
+                <div class="mobile-menu-logo" style="display: none; width: 100%; padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid rgba(0,0,0,0.1);">
+                    <img src="assets/images/logo.svg" alt="GoatFarm" style="height: 40px;">
+                </div>
                 <ul class="nav-menu" style="margin-left: auto; margin-right: 20px;">
                     <li class="nav-item"><a href="index.html">Home</a></li>
                     <li class="nav-item"><a href="index-2.html">Home 2</a></li>
@@ -67,10 +99,12 @@
         </div>
     </header>
 
-    <div class="page-header">
+    <div class="page-header"
+        style="background: linear-gradient(rgba(138, 154, 91, 0.8), rgba(138, 154, 91, 0.8)), url('assets/images/happy-herd.png'); background-size: cover; background-position: center; padding: 160px 0 100px;">
         <div class="container">
-            <h1 class="animate-up">Class Schedule</h1>
-            <p class="animate-up delay-1" style="opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 1.1rem;">
+            <h1 class="animate-up" style="color: white; text-shadow: 0 5px 15px rgba(0,0,0,0.2);">Class Schedule</h1>
+            <p class="animate-up delay-1"
+                style="color: white; opacity: 1; max-width: 600px; margin: 0 auto; font-size: 1.25rem; text-shadow: 0 2px 10px rgba(0,0,0,0.1);">
                 Find the perfect time to unroll your mat and meet the herd.</p>
         </div>
     </div>
@@ -84,9 +118,10 @@
                 <button class="btn">Later</button>
             </div>
 
-            <div class="grid grid-3">
+            <div class="grid grid-3" id="main-classes-grid">
                 <div class="card">
-                    <div class="card-img-wrapper"><img src="assets/images/barn.png" alt="Sunrise Flow" class="card-img">
+                    <div class="card-img-wrapper"><img src="assets/images/sunrise-class.png" alt="Sunrise Flow"
+                            class="card-img">
                     </div>
                     <div class="card-body">
                         <span
@@ -99,7 +134,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-img-wrapper"><img src="assets/images/hero.png" alt="Meadow Vinyasa"
+                    <div class="card-img-wrapper"><img src="assets/images/meadow-class.png" alt="Meadow Vinyasa"
                             class="card-img"></div>
                     <div class="card-body">
                         <span
@@ -112,7 +147,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-img-wrapper"><img src="assets/images/goat2.png" alt="Sunset Restore"
+                    <div class="card-img-wrapper"><img src="assets/images/sunset-yoga.png" alt="Sunset Restore"
                             class="card-img"></div>
                     <div class="card-body">
                         <span
@@ -125,7 +160,8 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-img-wrapper"><img src="assets/images/hero.png" alt="Family Flow" class="card-img">
+                    <div class="card-img-wrapper"><img src="assets/images/family-class.png" alt="Family Flow"
+                            class="card-img">
                     </div>
                     <div class="card-body">
                         <span
@@ -138,7 +174,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-img-wrapper"><img src="assets/images/barn.png" alt="Advanced Vinyasa"
+                    <div class="card-img-wrapper"><img src="assets/images/daisy.png" alt="Advanced Vinyasa"
                             class="card-img"></div>
                     <div class="card-body">
                         <span
@@ -151,7 +187,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-img-wrapper"><img src="assets/images/goat2.png" alt="Private Booking"
+                    <div class="card-img-wrapper"><img src="assets/images/happy-herd.png" alt="Private Booking"
                             class="card-img"></div>
                     <div class="card-body">
                         <span
@@ -166,12 +202,42 @@
         </div>
     </section>
 
+    <!-- Know Before You Go (New Section) -->
+    <section class="section" style="background-color: var(--primary); color: white;">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">Know Before You Go</h2>
+                <p style="color: rgba(255,255,255,0.8);">Tips for your best goat yoga experience</p>
+            </div>
+            <div class="grid grid-3" id="know-before-grid">
+                <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">🧘‍♀️</div>
+                    <h3>Wear Comfy Layers</h3>
+                    <p style="opacity: 0.9;">Choose yoga gear that's comfortable and that you don't mind getting a
+                        little "farm-dusty." Goats love zippers and drawstrings!</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">🚿</div>
+                    <h3>Mat Cleaning Provided</h3>
+                    <p style="opacity: 0.9;">We provide organic, goat-safe mat cleaner for use after every session to
+                        keep your gear fresh and clean.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">📸</div>
+                    <h3>Photo-Op Time</h3>
+                    <p style="opacity: 0.9;">The last 15 minutes of every class are dedicated to goat cuddles and
+                        photos. We'll help you get that perfect selfie!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col" style="text-align: left;">
-                    <h3 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 1rem;">GoatFarm</h3>
+                    <div style="margin-bottom: 1rem;"><img src="assets/images/logo.svg" alt="GoatFarm" style="height: 40px;"></div>
                     <p>A fun, whimsical platform offering organic goat yoga experiences in a beautiful farm setting.</p>
                 </div>
                 <div class="footer-col" style="text-align: left;">
@@ -202,9 +268,10 @@
                     </form>
                 </div>
             </div>
-            <div class="footer-bottom">&copy; 2024 GoatFarm. All rights reserved. Built with love for goats.</div>
+            <div class="footer-bottom">&copy; 2026 GoatFarm. All rights reserved. Built with love for goats.</div>
         </div>
     </footer>
+    <button class="back-to-top" title="Back to Top">↑</button>
 
     <script src="assets/js/main.js"></script>
 </body>
