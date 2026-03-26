@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waivers | GoatFarm</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+    <!-- Topbar -->
+    <header class="dashboard-topbar">
+        <div class="topbar-left">
+            <button class="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+            <a href="index.html" class="brand-logo">GoatFarm</a>
+        </div>
+        <div class="topbar-right">
+            <button class="icon-btn rtl-toggle" title="Toggle RTL">🌐</button>
+            <button class="icon-btn theme-toggle" title="Toggle Theme">🌙</button>
+            <div class="user-profile-sm">
+                <div class="user-avatar-sm">👤</div>
+                <div class="user-info-sm">
+                    <strong>Jane Doe</strong>
+                    <span style="font-size: 0.8rem; display: block; opacity: 0.7;">Yogi Member</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+        <div class="sidebar-user">
+            <div class="sidebar-avatar">👤</div>
+            <h4>Jane Doe</h4>
+            <p style="font-size: 0.85rem; opacity: 0.7;">jane.doe@example.com</p>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-link">
+                <span>📊</span> Overview
+            </a>
+            <a href="dashboard-bookings.html" class="nav-link">
+                <span>📅</span> My Bookings
+            </a>
+            <a href="dashboard-waivers.html" class="nav-link">
+                <span>📄</span> Waivers
+            </a>
+            <a href="dashboard-history.html" class="nav-link">
+                <span>🛍️</span> Purchase History
+            </a>
+        </nav>
+        <div class="nav-logout">
+            <a href="login.html" class="nav-link">
+                <span>🚪</span> Logout
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <div class="content-header">
+            <div>
+                <h1>Liability Waivers</h1>
+                <p class="subtitle">Manage required legal documentation</p>
+            </div>
+        </div>
+
+        <div class="waiver-card">
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <span style="font-size: 3rem;">✅</span>
+                <div>
+                    <h2 style="font-family: var(--font-body); font-weight: bold; font-size: 1.5rem; margin-bottom: 4px;">Annual General Waiver</h2>
+                    <p style="opacity: 0.8; margin-bottom: 8px;">Required for all participants. Covers general interactions and yoga sessions.</p>
+                    <span class="badge badge-success">Valid</span>
+                    <span style="font-size: 0.85rem; opacity: 0.7; margin-left: 10px;">Signed on Sept 28, 2024</span>
+                </div>
+            </div>
+            <div>
+                <button class="btn-outline">Download PDF</button>
+            </div>
+        </div>
+
+        <div class="stats-grid" style="margin-top: 32px;">
+            <div class="content-section" style="margin-bottom: 0;">
+                <span style="font-size: 2rem; display: block; margin-bottom: 12px;">📆</span>
+                <h4 style="font-family: var(--font-body); font-weight: 600; font-size: 1.1rem; margin-bottom: 8px;">Valid for 1 Year</h4>
+                <p style="font-size: 0.9rem; opacity: 0.8;">Waivers must be renewed annually before your first session of the new year.</p>
+            </div>
+            <div class="content-section" style="margin-bottom: 0;">
+                <span style="font-size: 2rem; display: block; margin-bottom: 12px;">👨‍👩‍👧‍👦</span>
+                <h4 style="font-family: var(--font-body); font-weight: 600; font-size: 1.1rem; margin-bottom: 8px;">Minors Info</h4>
+                <p style="font-size: 0.9rem; opacity: 0.8;">Participants under 18 must have a waiver signed by a legal guardian.</p>
+            </div>
+            <div class="content-section" style="margin-bottom: 0;">
+                <span style="font-size: 2rem; display: block; margin-bottom: 12px;">🔒</span>
+                <h4 style="font-family: var(--font-body); font-weight: 600; font-size: 1.1rem; margin-bottom: 8px;">Secure Storage</h4>
+                <p style="font-size: 0.9rem; opacity: 0.8;">Documents are legally binding and stored securely via industry standards.</p>
+            </div>
+        </div>
+
+        <div class="content-section" style="margin-top: 32px;">
+            <div class="section-header">
+                <h2>Waiver History</h2>
+            </div>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Waiver Type</th>
+                            <th>Signed Date</th>
+                            <th>Expiration</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Annual General Waiver</strong></td>
+                            <td>Sep 28, 2024</td>
+                            <td>Sep 28, 2025</td>
+                            <td><span class="badge badge-success">Active</span></td>
+                            <td><a class="action-link">Download PDF</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Annual General Waiver</strong></td>
+                            <td>Aug 15, 2023</td>
+                            <td>Aug 15, 2024</td>
+                            <td><span class="badge badge-neutral">Expired</span></td>
+                            <td><a class="action-link" style="color: var(--text-dark);">Archived</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div style="display: flex; gap: 20px; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+                <div>
+                    <h3 style="font-family: var(--font-body); font-weight: 600; margin-bottom: 8px;">Need to sign a new waiver?</h3>
+                    <p style="opacity: 0.8; font-size: 0.95rem;">You can start the digital signing process immediately.</p>
+                </div>
+                <button class="btn-primary">Sign New Waiver</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

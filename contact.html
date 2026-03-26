@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | GoatFarm</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .page-header { background: var(--primary); color: white; padding: 120px 0 60px; text-align: center; }
+        .map-container { width: 100%; height: 100%; min-height: 400px; border-radius: var(--border-radius); overflow: hidden; }
+        .map-container iframe { width: 100%; height: 100%; border: none; }
+        .contact-info { margin-top: 30px; }
+        .contact-info-item { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; font-size: 1.1rem; }
+        .contact-icon { background: var(--bg-secondary); color: var(--primary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; }
+        @media (max-width: 768px) {
+            .contact-info-item { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">GoatFarm</a>
+            <div class="nav-menu-wrapper" style="display:flex; justify-content: space-between; align-items: center; width:100%">
+                <ul class="nav-menu" style="margin-left: auto; margin-right: 20px;">
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                    <li class="nav-item"><a href="index-2.html">Home 2</a></li>
+                    <li class="nav-item"><a href="classes.html">Classes</a></li>
+                    <li class="nav-item"><a href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="active">Contact</a></li>
+                    <li class="nav-item"><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="rtl-toggle theme-toggle" title="Toggle RTL" style="margin-right: 5px;">🌐</button>
+                    <button class="theme-toggle">🌙</button>
+                    <a href="login.html" class="btn btn-primary" style="padding: 8px 16px;">Login</a>
+                </div>
+            </div>
+            <button class="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1 class="animate-up">Get in Touch</h1>
+            <p class="animate-up delay-1" style="opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 1.1rem;">Have questions about our classes or private events? We'd love to hear from you!</p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="section contact-section">
+        <div class="container">
+            
+            <div class="contact-layout">
+                
+                <!-- Contact Form -->
+                <div class="contact-form content-centered">
+                    <h2 style="margin-bottom: 24px; text-align: center;">Send a Message</h2>
+                    <form id="contactForm" style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="form-group" style="width: 100%;">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-input" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group" style="width: 100%;">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-input" placeholder="Your email address" required>
+                        </div>
+                        <div class="form-group" style="width: 100%;">
+                            <label class="form-label">Phone (Optional)</label>
+                            <input type="tel" class="form-input" placeholder="Your phone number">
+                        </div>
+                        <div class="form-group" style="width: 100%;">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-input" rows="5" placeholder="How can we help?" required style="resize: vertical;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 100%;">Send Message</button>
+                    </form>
+                </div>
+                
+                <!-- Map and Info -->
+                <div class="content-centered" style="display: flex; flex-direction: column;">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46939.99849544975!2d-77.34757271871221!3d42.98065099516641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d1349f7baaaab1%3A0x9566378e9f3bde4c!2sFarmington%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <strong>Visit the Farm</strong><br>
+                                <span style="opacity: 0.8;">123 Meadow Lane, Farmington, NY 12345</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <strong>Call Us</strong><br>
+                                <span style="opacity: 0.8;">(555) 123-4567</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <strong>Email Us</strong><br>
+                                <span style="opacity: 0.8;">hello@goatfarm.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" style="text-align: left;"><h3 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 1rem;">GoatFarm</h3><p>A fun, whimsical platform offering organic goat yoga experiences in a beautiful farm setting.</p></div>
+                <div class="footer-col" style="text-align: left;"><h4>Quick Links</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="classes.html">Classes</a></li><li><a href="shop.html">Shop</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+                <div class="footer-col" style="text-align: left;"><h4>Contact Us</h4><ul class="footer-links"><li>123 Meadow Lane</li><li>Farmington, NY 12345</li><li><a href="mailto:hello@goatfarm.com">hello@goatfarm.com</a></li><li><a href="tel:+15551234567">(555) 123-4567</a></li></ul></div>
+                <div class="footer-col" style="text-align: left;"><h4>Newsletter</h4><p style="margin-bottom: 15px;">Subscribe for farm updates.</p><form style="display: flex; gap: 10px;"><input type="email" placeholder="Email Address" style="padding: 10px; border-radius: 8px; border: none; flex-grow: 1;"><button type="submit" class="btn btn-secondary" style="padding: 10px 15px;">Go</button></form></div>
+            </div>
+            <div class="footer-bottom">&copy; 2024 GoatFarm. All rights reserved. Built with love for goats.</div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

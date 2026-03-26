@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Shop | GoatFarm</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .page-header { background: var(--primary); color: white; padding: 120px 0 60px; text-align: center; }
+        .filter-nav { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap; }
+        .filter-nav .btn { background: var(--bg-color); border: 1px solid rgba(0,0,0,0.1); color: var(--text-dark); }
+        .filter-nav .btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">GoatFarm</a>
+            <div class="nav-menu-wrapper" style="display:flex; justify-content: space-between; align-items: center; width:100%">
+                <ul class="nav-menu" style="margin-left: auto; margin-right: 20px;">
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                    <li class="nav-item"><a href="index-2.html">Home 2</a></li>
+                    <li class="nav-item"><a href="classes.html">Classes</a></li>
+                    <li class="nav-item"><a href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="rtl-toggle theme-toggle" title="Toggle RTL" style="margin-right: 5px;">🌐</button>
+                    <button class="theme-toggle">🌙</button>
+                    <a href="login.html" class="btn btn-primary" style="padding: 8px 16px;">Login</a>
+                </div>
+            </div>
+            <button class="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1 class="animate-up">Farm Merchandise Shop</h1>
+            <p class="animate-up delay-1" style="opacity: 0.9; max-width: 600px; margin: 0 auto; font-size: 1.1rem;">Support the herd with our handmade soaps, farm apparel, and yoga accessories.</p>
+        </div>
+    </div>
+
+    <!-- Shop Section -->
+    <section class="section">
+        <div class="container">
+            <div class="filter-nav">
+                <button class="btn active">All Products</button>
+                <button class="btn">Soaps & Skincare</button>
+                <button class="btn">Apparel</button>
+                <button class="btn">Yoga Gear</button>
+            </div>
+            
+            <div class="grid grid-4">
+                <!-- Product 1 -->
+                <div class="card">
+                    <div class="card-img-wrapper" style="height: 250px;"><img src="assets/images/soap.png" alt="Lavender Soap" class="card-img"></div>
+                    <div class="card-body">
+                        <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dark); opacity: 0.6; margin-bottom: 5px;">Soaps</span>
+                        <h3 class="card-title" style="font-size: 1.25rem;">Lavender Goat Milk Soap</h3>
+                        <p style="font-weight: 600; color: var(--primary); font-size: 1.2rem; margin-bottom: 15px;">$12.00</p>
+                        <button class="btn btn-outline" style="width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="card">
+                    <div class="card-img-wrapper" style="height: 250px;"><img src="assets/images/soap.png" alt="Oatmeal Soap" class="card-img"></div>
+                    <div class="card-body">
+                        <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dark); opacity: 0.6; margin-bottom: 5px;">Soaps</span>
+                        <h3 class="card-title" style="font-size: 1.25rem;">Oatmeal Honey Soap</h3>
+                        <p style="font-weight: 600; color: var(--primary); font-size: 1.2rem; margin-bottom: 15px;">$12.00</p>
+                        <button class="btn btn-outline" style="width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="card">
+                    <div class="card-img-wrapper" style="height: 250px;"><img src="assets/images/goat2.png" alt="Farm T-Shirt" class="card-img" style="object-position: top;"></div>
+                    <div class="card-body">
+                        <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dark); opacity: 0.6; margin-bottom: 5px;">Apparel</span>
+                        <h3 class="card-title" style="font-size: 1.25rem;">"Just Kidding" Tee</h3>
+                        <p style="font-weight: 600; color: var(--primary); font-size: 1.2rem; margin-bottom: 15px;">$25.00</p>
+                        <button class="btn btn-outline" style="width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="card">
+                    <div class="card-img-wrapper" style="height: 250px;"><img src="assets/images/barn.png" alt="Eco Mat" class="card-img"></div>
+                    <div class="card-body">
+                        <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dark); opacity: 0.6; margin-bottom: 5px;">Yoga Gear</span>
+                        <h3 class="card-title" style="font-size: 1.25rem;">Eco Cork Yoga Mat</h3>
+                        <p style="font-weight: 600; color: var(--primary); font-size: 1.2rem; margin-bottom: 15px;">$65.00</p>
+                        <button class="btn btn-outline" style="width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                 <div class="card">
+                    <div class="card-img-wrapper" style="height: 250px;"><img src="assets/images/goat2.png" alt="Yoga Block" class="card-img"></div>
+                    <div class="card-body">
+                        <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dark); opacity: 0.6; margin-bottom: 5px;">Yoga Gear</span>
+                        <h3 class="card-title" style="font-size: 1.25rem;">Wooden Yoga Block</h3>
+                        <p style="font-weight: 600; color: var(--primary); font-size: 1.2rem; margin-bottom: 15px;">$20.00</p>
+                        <button class="btn btn-outline" style="width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                 <div class="card">
+                    <div class="card-img-wrapper" style="height: 250px;"><img src="assets/images/soap.png" alt="Lotions" class="card-img"></div>
+                    <div class="card-body">
+                        <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dark); opacity: 0.6; margin-bottom: 5px;">Skincare</span>
+                        <h3 class="card-title" style="font-size: 1.25rem;">Goat Milk Body Lotion</h3>
+                        <p style="font-weight: 600; color: var(--primary); font-size: 1.2rem; margin-bottom: 15px;">$18.00</p>
+                        <button class="btn btn-outline" style="width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+                
+                 <!-- Product 7 -->
+                 <div class="card">
+                    <div class="card-img-wrapper" style="height: 250px;"><img src="assets/images/goat2.png" alt="Hat" class="card-img" style="object-position:top;"></div>
+                    <div class="card-body">
+                        <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dark); opacity: 0.6; margin-bottom: 5px;">Apparel</span>
+                        <h3 class="card-title" style="font-size: 1.25rem;">Farm Logo Trucker Hat</h3>
+                        <p style="font-weight: 600; color: var(--primary); font-size: 1.2rem; margin-bottom: 15px;">$22.00</p>
+                        <button class="btn btn-outline" style="width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+                
+                 <!-- Product 8 -->
+                 <div class="card">
+                    <div class="card-img-wrapper" style="height: 250px;"><img src="assets/images/hero.png" alt="Gift Card" class="card-img"></div>
+                    <div class="card-body">
+                        <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dark); opacity: 0.6; margin-bottom: 5px;">Digital</span>
+                        <h3 class="card-title" style="font-size: 1.25rem;">Yoga Experience Card</h3>
+                        <p style="font-weight: 600; color: var(--primary); font-size: 1.2rem; margin-bottom: 15px;">$50 - $100</p>
+                        <button class="btn btn-outline" style="width: 100%;">Select Amount</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" style="text-align: left;"><h3 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 1rem;">GoatFarm</h3><p>A fun, whimsical platform offering organic goat yoga experiences in a beautiful farm setting.</p></div>
+                <div class="footer-col" style="text-align: left;"><h4>Quick Links</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="classes.html">Classes</a></li><li><a href="shop.html">Shop</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+                <div class="footer-col" style="text-align: left;"><h4>Contact Us</h4><ul class="footer-links"><li>123 Meadow Lane</li><li>Farmington, NY 12345</li><li><a href="mailto:hello@goatfarm.com">hello@goatfarm.com</a></li><li><a href="tel:+15551234567">(555) 123-4567</a></li></ul></div>
+                <div class="footer-col" style="text-align: left;"><h4>Newsletter</h4><p style="margin-bottom: 15px;">Subscribe for farm updates.</p><form style="display: flex; gap: 10px;"><input type="email" placeholder="Email Address" style="padding: 10px; border-radius: 8px; border: none; flex-grow: 1;"><button type="submit" class="btn btn-secondary" style="padding: 10px 15px;">Go</button></form></div>
+            </div>
+            <div class="footer-bottom">&copy; 2024 GoatFarm. All rights reserved. Built with love for goats.</div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

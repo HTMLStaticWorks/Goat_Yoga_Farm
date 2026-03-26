@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Overview | GoatFarm</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body>
+    <!-- Topbar -->
+    <header class="dashboard-topbar">
+        <div class="topbar-left">
+            <button class="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+            <a href="index.html" class="brand-logo">GoatFarm</a>
+        </div>
+        <div class="topbar-right">
+            <button class="icon-btn rtl-toggle" title="Toggle RTL">🌐</button>
+            <button class="icon-btn theme-toggle" title="Toggle Theme">🌙</button>
+            <div class="user-profile-sm">
+                <div class="user-avatar-sm">👤</div>
+                <div class="user-info-sm">
+                    <strong>Jane Doe</strong>
+                    <span style="font-size: 0.8rem; display: block; opacity: 0.7;">Yogi Member</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+        <div class="sidebar-user">
+            <div class="sidebar-avatar">👤</div>
+            <h4>Jane Doe</h4>
+            <p style="font-size: 0.85rem; opacity: 0.7;">jane.doe@example.com</p>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-link">
+                <span>📊</span> Overview
+            </a>
+            <a href="dashboard-bookings.html" class="nav-link">
+                <span>📅</span> My Bookings
+            </a>
+            <a href="dashboard-waivers.html" class="nav-link">
+                <span>📄</span> Waivers
+            </a>
+            <a href="dashboard-history.html" class="nav-link">
+                <span>🛍️</span> Purchase History
+            </a>
+        </nav>
+        <div class="nav-logout">
+            <a href="login.html" class="nav-link">
+                <span>🚪</span> Logout
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <div class="content-header">
+            <div>
+                <h1>Dashboard Overview</h1>
+                <p class="subtitle">Welcome back to the farm, Jane!</p>
+            </div>
+            <a href="classes.html" class="btn-primary">Book New Class</a>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">📅</div>
+                <div class="stat-content">
+                    <h3 class="stat-value">2</h3>
+                    <p class="stat-label">Upcoming Classes</p>
+                    <span class="stat-trend neutral">Next class tomorrow</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon" style="color: var(--success); background: rgba(138, 154, 91, 0.15);">📄</div>
+                <div class="stat-content">
+                    <h3 class="stat-value">Valid</h3>
+                    <p class="stat-label">Waiver Status</p>
+                    <span class="stat-trend positive">Expires Dec 2025</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🛍️</div>
+                <div class="stat-content">
+                    <h3 class="stat-value">$145</h3>
+                    <p class="stat-label">Total Spent</p>
+                    <span class="stat-trend neutral">Across 3 orders</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon" style="color: var(--warning); background: rgba(242, 166, 90, 0.15);">⭐</div>
+                <div class="stat-content">
+                    <h3 class="stat-value">8</h3>
+                    <p class="stat-label">Classes Attended</p>
+                    <span class="stat-trend positive">+2 this month</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section" style="background: rgba(138, 154, 91, 0.05); border-color: var(--primary);">
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <span style="font-size: 2.5rem;">📄</span>
+                    <div>
+                        <h3 style="font-family: var(--font-body); font-weight: 600;">Liability Waiver Signed</h3>
+                        <p style="opacity: 0.8; font-size: 0.9rem;">You are all cleared for your upcoming sessions.</p>
+                    </div>
+                </div>
+                <a href="dashboard-waivers.html" class="btn-outline">View Details</a>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <!--<div class="content-section">
+            <div class="section-header">
+                <h2>Upcoming Bookings</h2>
+                <a href="dashboard-bookings.html" class="btn-outline btn-sm">View All</a>
+            </div>
+            <div class="table-responsive" style="overflow-x: scroll;">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Class Name</th>
+                            <th>Date & Time</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Sunrise Goat Flow</strong></td>
+                            <td>Oct 12, 2024 | 8:00 AM</td>
+                            <td>Indoor Barn</td>
+                            <td><span class="badge badge-success">Confirmed</span></td>
+                            <td><a class="action-link">View Details</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Family Fun Flow</strong></td>
+                            <td>Oct 20, 2024 | 9:00 AM</td>
+                            <td>Indoor Barn</td>
+                            <td><span class="badge badge-success">Confirmed</span></td>
+                            <td><a class="action-link">View Details</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>-->
+        <div class="content-section">
+            <div class="section-header">
+                <h2>Recent Activity</h2>
+            </div>
+            <div class="activity-item">
+                <div class="activity-icon">✅</div>
+                <div class="activity-content">
+                    <h4>Booked "Sunrise Goat Flow" class</h4>
+                    <p>Transaction ID: #BK-7892 completed</p>
+                    <span class="activity-time">Yesterday at 2:30 PM</span>
+                </div>
+            </div>
+            <div class="activity-item">
+                <div class="activity-icon">📦</div>
+                <div class="activity-content">
+                    <h4>Farm Shop Order Delivered</h4>
+                    <p>Order #ORD-1024 delivered to your address</p>
+                    <span class="activity-time">Oct 5, 2024</span>
+                </div>
+            </div>
+            <div class="activity-item">
+                <div class="activity-icon">✍️</div>
+                <div class="activity-content">
+                    <h4>Digital Waiver Signed</h4>
+                    <p>Annual liability waiver completed</p>
+                    <span class="activity-time">Sep 28, 2024</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>

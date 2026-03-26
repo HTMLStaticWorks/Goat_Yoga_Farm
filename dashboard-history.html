@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase History | GoatFarm</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+    <!-- Topbar -->
+    <header class="dashboard-topbar">
+        <div class="topbar-left">
+            <button class="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+            <a href="index.html" class="brand-logo">GoatFarm</a>
+        </div>
+        <div class="topbar-right">
+            <button class="icon-btn rtl-toggle" title="Toggle RTL">🌐</button>
+            <button class="icon-btn theme-toggle" title="Toggle Theme">🌙</button>
+            <div class="user-profile-sm">
+                <div class="user-avatar-sm">👤</div>
+                <div class="user-info-sm">
+                    <strong>Jane Doe</strong>
+                    <span style="font-size: 0.8rem; display: block; opacity: 0.7;">Yogi Member</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+        <div class="sidebar-user">
+            <div class="sidebar-avatar">👤</div>
+            <h4>Jane Doe</h4>
+            <p style="font-size: 0.85rem; opacity: 0.7;">jane.doe@example.com</p>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-link">
+                <span>📊</span> Overview
+            </a>
+            <a href="dashboard-bookings.html" class="nav-link">
+                <span>📅</span> My Bookings
+            </a>
+            <a href="dashboard-waivers.html" class="nav-link">
+                <span>📄</span> Waivers
+            </a>
+            <a href="dashboard-history.html" class="nav-link">
+                <span>🛍️</span> Purchase History
+            </a>
+        </nav>
+        <div class="nav-logout">
+            <a href="login.html" class="nav-link">
+                <span>🚪</span> Logout
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <div class="content-header">
+            <div>
+                <h1>Purchase History</h1>
+                <p class="subtitle">Review your Farm Shop orders</p>
+            </div>
+            <a href="shop.html" class="btn-primary">Visit Farm Shop</a>
+        </div>
+
+        <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            <div class="stat-card">
+                <div class="stat-icon">📦</div>
+                <div class="stat-content">
+                    <h3 class="stat-value">3</h3>
+                    <p class="stat-label">Total Orders</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">💳</div>
+                <div class="stat-content">
+                    <h3 class="stat-value">$145.00</h3>
+                    <p class="stat-label">Total Spent</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon" style="color: var(--secondary); background: var(--primary);">🚚</div>
+                <div class="stat-content">
+                    <h3 class="stat-value">0</h3>
+                    <p class="stat-label">In Transit</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-header">
+                <h2>All Orders</h2>
+            </div>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Date</th>
+                            <th>Items</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>#ORD-1024</strong></td>
+                            <td>Oct 1, 2024</td>
+                            <td>1x Lavender Goat Milk Soap<br>1x Organic T-Shirt</td>
+                            <td>$37.00</td>
+                            <td><span class="badge badge-neutral">Delivered</span></td>
+                            <td>
+                                <a class="action-link">View Receipt</a>
+                                <a class="action-link">Reorder</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>#ORD-0951</strong></td>
+                            <td>Aug 15, 2024</td>
+                            <td>1x Eco Cork Yoga Mat</td>
+                            <td>$65.00</td>
+                            <td><span class="badge badge-neutral">Delivered</span></td>
+                            <td>
+                                <a class="action-link">View Receipt</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>#ORD-0855</strong></td>
+                            <td>Jul 2, 2024</td>
+                            <td>2x Oatmeal Honey Soap<br>1x Logo Trucker Hat</td>
+                            <td>$43.00</td>
+                            <td><span class="badge badge-neutral">Delivered</span></td>
+                            <td>
+                                <a class="action-link">View Receipt</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+                <span style="font-size: 2rem; color: var(--info);">🚚</span>
+                <div>
+                    <h3 style="font-family: var(--font-body); font-weight: 600; margin-bottom: 8px;">Shipping & Tracking</h3>
+                    <p style="opacity: 0.8; font-size: 0.95rem;">Farm Shop items typically ship within 2 business days. If you have questions about an order or need to initiate a return, please contact our support team at <a href="mailto:shop@goatfarm.com" style="color: var(--primary); font-weight: 600;">shop@goatfarm.com</a>.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
