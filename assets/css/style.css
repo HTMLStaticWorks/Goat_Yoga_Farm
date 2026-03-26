@@ -495,7 +495,8 @@ h3 {
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  aspect-ratio: 16/9;
+  height: 600px;
+  width: 100%;
 }
 
 .hero-img {
@@ -721,6 +722,25 @@ h3 {
   .footer-grid {
     text-align: center;
   }
+
+  .hero-split {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+    padding-top: calc(var(--nav-height) + 20px);
+  }
+
+  .hero-split .hero-content {
+    text-align: center;
+  }
+
+  .hero-split .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-img-container {
+    height: 400px;
+  }
 }
 
 /* Mobile Specific */
@@ -784,6 +804,10 @@ h3 {
   .hero-split {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .hero-img-container {
+    height: 300px;
   }
 
   .hero-split .hero-content {
