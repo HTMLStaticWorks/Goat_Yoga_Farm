@@ -314,6 +314,70 @@ h3 {
   align-items: center;
 }
 
+/* Logo Image Standardization - SAME SIZE EVERYWHERE */
+.logo img,
+.footer-col img,
+.footer-logo img,
+a.logo img,
+header .logo img,
+footer .logo img,
+header img[alt="GoatFarm"],
+footer img[alt="GoatFarm"],
+.mobile-menu-logo img,
+.auth-logo img {
+  height: 42px !important;
+  width: auto !important;
+  display: block !important;
+  max-width: none !important;
+}
+
+/* Tablet - keep same as desktop */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .logo img,
+  .footer-col img,
+  .footer-logo img,
+  a.logo img,
+  header .logo img,
+  footer .logo img,
+  header img[alt="GoatFarm"],
+  footer img[alt="GoatFarm"],
+  .mobile-menu-logo img,
+  .auth-logo img {
+    height: 42px !important;
+  }
+}
+
+/* Mobile - smaller */
+@media (max-width: 768px) {
+  .logo img,
+  .footer-col img,
+  .footer-logo img,
+  a.logo img,
+  header .logo img,
+  footer .logo img,
+  header img[alt="GoatFarm"],
+  footer img[alt="GoatFarm"],
+  .mobile-menu-logo img,
+  .auth-logo img {
+    height: 38px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img,
+  .footer-col img,
+  .footer-logo img,
+  a.logo img,
+  header .logo img,
+  footer .logo img,
+  header img[alt="GoatFarm"],
+  footer img[alt="GoatFarm"],
+  .mobile-menu-logo img,
+  .auth-logo img {
+    height: 35px !important;
+  }
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
@@ -395,7 +459,7 @@ h3 {
   }
 
   .mobile-menu-logo {
-    display: block !important;
+    display: none !important;
   }
 
   .nav-menu {
@@ -917,7 +981,7 @@ h3 {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
-  z-index: 1000;
+  z-index: 900;
   border: none;
   font-weight: bold;
 }
@@ -941,34 +1005,4 @@ h3 {
     height: 45px;
   }
 }
-
-/* Logo Image Standardization */
-.logo img,
-.footer-logo img,
-.auth-logo img,
-.mobile-menu-logo img {
-  height: 50px;
-  width: auto;
-  display: block;
-}
-
-/* Responsive logo sizing */
-@media (max-width: 768px) {
-
-  .logo img,
-  .footer-logo img,
-  .auth-logo img,
-  .mobile-menu-logo img {
-    height: 40px;
-  }
-}
-
-@media (max-width: 480px) {
-
-  .logo img,
-  .footer-logo img,
-  .auth-logo img,
-  .mobile-menu-logo img {
-    height: 35px;
-  }
-}
+
