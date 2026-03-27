@@ -941,3 +941,34 @@ h3 {
     height: 45px;
   }
 }
+
+/* Logo Image Standardization */
+.logo img,
+.footer-logo img,
+.auth-logo img,
+.mobile-menu-logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+/* Responsive logo sizing */
+@media (max-width: 768px) {
+
+  .logo img,
+  .footer-logo img,
+  .auth-logo img,
+  .mobile-menu-logo img {
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .logo img,
+  .footer-logo img,
+  .auth-logo img,
+  .mobile-menu-logo img {
+    height: 35px;
+  }
+}
