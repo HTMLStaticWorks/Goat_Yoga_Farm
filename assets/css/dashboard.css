@@ -584,8 +584,20 @@ h5 {
         display: flex;
     }
 
-    .user-info-sm {
-        display: none;
+    .user-profile-sm {
+        display: none !important;
+    }
+
+    .dashboard-topbar {
+        padding: 0 16px;
+    }
+
+    .topbar-right {
+        gap: 10px;
+    }
+
+    .theme-toggle {
+        display: block !important;
     }
 
     .dashboard-sidebar {
