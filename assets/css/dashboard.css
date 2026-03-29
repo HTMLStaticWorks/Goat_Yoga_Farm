@@ -573,6 +573,12 @@ h5 {
 }
 
 /* 8. Responsive Breakpoints */
+@media (min-width: 1024px) {
+    .user-profile-sm {
+        display: none !important;
+    }
+}
+
 @media (max-width: 1024px) {
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
