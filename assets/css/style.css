@@ -333,6 +333,7 @@ footer img[alt="GoatFarm"],
 
 /* Tablet - keep same as desktop */
 @media (max-width: 1024px) and (min-width: 769px) {
+
   .logo img,
   .footer-col img,
   .footer-logo img,
@@ -349,6 +350,7 @@ footer img[alt="GoatFarm"],
 
 /* Mobile - smaller */
 @media (max-width: 768px) {
+
   .logo img,
   .footer-col img,
   .footer-logo img,
@@ -364,6 +366,7 @@ footer img[alt="GoatFarm"],
 }
 
 @media (max-width: 480px) {
+
   .logo img,
   .footer-col img,
   .footer-logo img,
@@ -1005,4 +1008,39 @@ footer img[alt="GoatFarm"],
     height: 45px;
   }
 }
-
+
+/* Footer Social Links */
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.footer-social-link:hover {
+  transform: translateY(-4px) scale(1.1);
+  filter: brightness(1.15);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.footer-social-link.facebook {
+  background: #1877F2;
+}
+
+.footer-social-link.instagram {
+  background: #E4405F;
+}
+
+.footer-social-link.twitter {
+  background: #000000;
+}
+
+.footer-social-link.youtube {
+  background: #FF0000;
+}
