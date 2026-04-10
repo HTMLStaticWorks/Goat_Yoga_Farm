@@ -145,26 +145,8 @@ h5 {
     padding: 4px;
 }
 
-.user-profile-sm {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    cursor: pointer;
-}
-
-.user-avatar-sm {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-color: var(--bg-secondary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--border-color);
-}
-
-.user-info-sm {
-    display: block;
+.profile-btn {
+    margin-left: 4px;
 }
 
 /* 4. Sidebar Styles */
@@ -573,11 +555,7 @@ h5 {
 }
 
 /* 8. Responsive Breakpoints */
-@media (min-width: 1024px) {
-    .user-profile-sm {
-        display: none !important;
-    }
-}
+
 
 @media (max-width: 1024px) {
     .stats-grid {
@@ -590,9 +568,7 @@ h5 {
         display: flex;
     }
 
-    .user-profile-sm {
-        display: none !important;
-    }
+
 
     .dashboard-topbar {
         padding: 0 16px;
